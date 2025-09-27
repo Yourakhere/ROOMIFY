@@ -4,7 +4,7 @@ import { Search, Plus, Edit3, Trash2, Users, Filter, RefreshCw } from "lucide-re
 import Input from "../Component/Input";
 import Button from "../Component/Button";
 import AddUserModal from "./Admin/UserMangement/AddUserModal"; 
-import axiosInstance from "../Config/apiconfig"; 
+import axiosInstance from "../Config/apiconfig.js"; 
 import UpdateUserModal from "./Admin/UserMangement/UpdateUserModal";
 import Loader from "./Loader.jsx";
 import { toast } from "react-toastify";
@@ -233,14 +233,7 @@ export default function UserManagement() {
                     {/* Actions */}
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-center space-x-2">
-                        <button
-                          onClick={() => updateUserhandle(user._id)}
-                          className="flex items-center space-x-1 px-3 py-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors"
-                          title="Edit user"
-                        >
-                          <Edit3 className="h-4 w-4" />
-                          <span className="text-sm font-medium">Edit</span>
-                        </button>
+                       {/** */}
                         
                         <button
                           onClick={() => deleteUserhandle(user?._id)}
